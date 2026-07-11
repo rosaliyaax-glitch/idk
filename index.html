@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Secret Scrapbook 🌸</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            user-select: none;
+        }
+
+        body {
+            background-color: #fce4ec; /* Soft scrapbook pink */
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1500px;
+            transition: background 1s ease;
+            position: relative;
+        }
+
+        /* Endless Lime Green Sparkles */
+        .sparkle-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .sparkle {
+            position: absolute;
+            color: #a3e635; /* Lime Green */
+            font-size: 1.2rem;
+            animation: floatDown linear infinite;
+            text-shadow: 0 0 5px rgba(163, 230, 53, 0.6);
+        }
+
+        @keyframes floatDown {
+            0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* SCENE 1 & 2 CONTAINER */
+        .scrapbook-container {
+            width: 90%;
+            max-width: 500px;
+            min-height: 600px;
+            background: #fff0f5;
+            border: 4px dashed #ffb6c1;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+            transition: all 1s ease;
+        }
+
+        /* Handwritten Captions & Doodles */
+        .doodle-caption {
+            position: absolute;
+            color: #ff69b4;
+            font-size: 0.85rem;
+            font-style: italic;
